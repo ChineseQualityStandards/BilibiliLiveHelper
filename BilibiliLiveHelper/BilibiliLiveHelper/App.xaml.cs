@@ -20,7 +20,7 @@ namespace BilibiliLiveHelper
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IMessageService, MessageService>();
+            
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

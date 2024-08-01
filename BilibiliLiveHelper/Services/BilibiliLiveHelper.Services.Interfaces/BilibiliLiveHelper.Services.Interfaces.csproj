@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BilibiliLiveHelper.Core\BilibiliLiveHelper.Core.csproj" />
+  </ItemGroup>
 
 </Project>

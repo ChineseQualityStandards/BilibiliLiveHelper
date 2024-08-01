@@ -24,5 +24,10 @@ namespace BilibiliLiveHelper.Modules.ModuleName.Views
         {
             InitializeComponent();
         }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.MainWindow.DragMove();
+        }
     }
 }

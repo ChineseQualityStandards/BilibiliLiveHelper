@@ -1,9 +1,2419 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
     <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\Icons\100-fill.svg" />
+    <None Remove="Resources\Icons\100.svg" />
+    <None Remove="Resources\Icons\1001.svg" />
+    <None Remove="Resources\Icons\1002.svg" />
+    <None Remove="Resources\Icons\1003.svg" />
+    <None Remove="Resources\Icons\1004.svg" />
+    <None Remove="Resources\Icons\1005.svg" />
+    <None Remove="Resources\Icons\1006.svg" />
+    <None Remove="Resources\Icons\1007.svg" />
+    <None Remove="Resources\Icons\1008.svg" />
+    <None Remove="Resources\Icons\1009.svg" />
+    <None Remove="Resources\Icons\101-fill.svg" />
+    <None Remove="Resources\Icons\101.svg" />
+    <None Remove="Resources\Icons\1010.svg" />
+    <None Remove="Resources\Icons\1011.svg" />
+    <None Remove="Resources\Icons\1012.svg" />
+    <None Remove="Resources\Icons\1013.svg" />
+    <None Remove="Resources\Icons\1014.svg" />
+    <None Remove="Resources\Icons\1015.svg" />
+    <None Remove="Resources\Icons\1016.svg" />
+    <None Remove="Resources\Icons\1017.svg" />
+    <None Remove="Resources\Icons\1018.svg" />
+    <None Remove="Resources\Icons\1019.svg" />
+    <None Remove="Resources\Icons\102-fill.svg" />
+    <None Remove="Resources\Icons\102.svg" />
+    <None Remove="Resources\Icons\1020.svg" />
+    <None Remove="Resources\Icons\1021.svg" />
+    <None Remove="Resources\Icons\1022.svg" />
+    <None Remove="Resources\Icons\1023.svg" />
+    <None Remove="Resources\Icons\1024.svg" />
+    <None Remove="Resources\Icons\1025.svg" />
+    <None Remove="Resources\Icons\1026.svg" />
+    <None Remove="Resources\Icons\1027.svg" />
+    <None Remove="Resources\Icons\1028.svg" />
+    <None Remove="Resources\Icons\1029.svg" />
+    <None Remove="Resources\Icons\103-fill.svg" />
+    <None Remove="Resources\Icons\103.svg" />
+    <None Remove="Resources\Icons\1030.svg" />
+    <None Remove="Resources\Icons\1031.svg" />
+    <None Remove="Resources\Icons\1032.svg" />
+    <None Remove="Resources\Icons\1033.svg" />
+    <None Remove="Resources\Icons\1034.svg" />
+    <None Remove="Resources\Icons\1035.svg" />
+    <None Remove="Resources\Icons\1036.svg" />
+    <None Remove="Resources\Icons\1037.svg" />
+    <None Remove="Resources\Icons\1038.svg" />
+    <None Remove="Resources\Icons\1039.svg" />
+    <None Remove="Resources\Icons\104-fill.svg" />
+    <None Remove="Resources\Icons\104.svg" />
+    <None Remove="Resources\Icons\1040.svg" />
+    <None Remove="Resources\Icons\1041.svg" />
+    <None Remove="Resources\Icons\1042.svg" />
+    <None Remove="Resources\Icons\1043.svg" />
+    <None Remove="Resources\Icons\1044.svg" />
+    <None Remove="Resources\Icons\1045.svg" />
+    <None Remove="Resources\Icons\1046.svg" />
+    <None Remove="Resources\Icons\1047.svg" />
+    <None Remove="Resources\Icons\1048.svg" />
+    <None Remove="Resources\Icons\1049.svg" />
+    <None Remove="Resources\Icons\1050.svg" />
+    <None Remove="Resources\Icons\1051.svg" />
+    <None Remove="Resources\Icons\1052.svg" />
+    <None Remove="Resources\Icons\1053.svg" />
+    <None Remove="Resources\Icons\1054.svg" />
+    <None Remove="Resources\Icons\1055.svg" />
+    <None Remove="Resources\Icons\1056.svg" />
+    <None Remove="Resources\Icons\1057.svg" />
+    <None Remove="Resources\Icons\1058.svg" />
+    <None Remove="Resources\Icons\1059.svg" />
+    <None Remove="Resources\Icons\1060.svg" />
+    <None Remove="Resources\Icons\1061.svg" />
+    <None Remove="Resources\Icons\1062.svg" />
+    <None Remove="Resources\Icons\1063.svg" />
+    <None Remove="Resources\Icons\1064.svg" />
+    <None Remove="Resources\Icons\1065.svg" />
+    <None Remove="Resources\Icons\1066.svg" />
+    <None Remove="Resources\Icons\1067.svg" />
+    <None Remove="Resources\Icons\1068.svg" />
+    <None Remove="Resources\Icons\1069.svg" />
+    <None Remove="Resources\Icons\1071.svg" />
+    <None Remove="Resources\Icons\1072.svg" />
+    <None Remove="Resources\Icons\1073.svg" />
+    <None Remove="Resources\Icons\1074.svg" />
+    <None Remove="Resources\Icons\1075.svg" />
+    <None Remove="Resources\Icons\1076.svg" />
+    <None Remove="Resources\Icons\1077.svg" />
+    <None Remove="Resources\Icons\1078.svg" />
+    <None Remove="Resources\Icons\1079.svg" />
+    <None Remove="Resources\Icons\1080.svg" />
+    <None Remove="Resources\Icons\1081.svg" />
+    <None Remove="Resources\Icons\1082.svg" />
+    <None Remove="Resources\Icons\1084.svg" />
+    <None Remove="Resources\Icons\1085.svg" />
+    <None Remove="Resources\Icons\1086.svg" />
+    <None Remove="Resources\Icons\1087.svg" />
+    <None Remove="Resources\Icons\1088.svg" />
+    <None Remove="Resources\Icons\1089.svg" />
+    <None Remove="Resources\Icons\1201.svg" />
+    <None Remove="Resources\Icons\1202.svg" />
+    <None Remove="Resources\Icons\1203.svg" />
+    <None Remove="Resources\Icons\1204.svg" />
+    <None Remove="Resources\Icons\1205.svg" />
+    <None Remove="Resources\Icons\1206.svg" />
+    <None Remove="Resources\Icons\1207.svg" />
+    <None Remove="Resources\Icons\1208.svg" />
+    <None Remove="Resources\Icons\1209.svg" />
+    <None Remove="Resources\Icons\1210.svg" />
+    <None Remove="Resources\Icons\1211.svg" />
+    <None Remove="Resources\Icons\1212.svg" />
+    <None Remove="Resources\Icons\1213.svg" />
+    <None Remove="Resources\Icons\1214.svg" />
+    <None Remove="Resources\Icons\1215.svg" />
+    <None Remove="Resources\Icons\1216.svg" />
+    <None Remove="Resources\Icons\1217.svg" />
+    <None Remove="Resources\Icons\1218.svg" />
+    <None Remove="Resources\Icons\1219.svg" />
+    <None Remove="Resources\Icons\1221.svg" />
+    <None Remove="Resources\Icons\1241.svg" />
+    <None Remove="Resources\Icons\1242.svg" />
+    <None Remove="Resources\Icons\1243.svg" />
+    <None Remove="Resources\Icons\1244.svg" />
+    <None Remove="Resources\Icons\1245.svg" />
+    <None Remove="Resources\Icons\1246.svg" />
+    <None Remove="Resources\Icons\1247.svg" />
+    <None Remove="Resources\Icons\1248.svg" />
+    <None Remove="Resources\Icons\1249.svg" />
+    <None Remove="Resources\Icons\1250.svg" />
+    <None Remove="Resources\Icons\1251.svg" />
+    <None Remove="Resources\Icons\1271.svg" />
+    <None Remove="Resources\Icons\1272.svg" />
+    <None Remove="Resources\Icons\1273.svg" />
+    <None Remove="Resources\Icons\1274.svg" />
+    <None Remove="Resources\Icons\150-fill.svg" />
+    <None Remove="Resources\Icons\150.svg" />
+    <None Remove="Resources\Icons\151-fill.svg" />
+    <None Remove="Resources\Icons\151.svg" />
+    <None Remove="Resources\Icons\152-fill.svg" />
+    <None Remove="Resources\Icons\152.svg" />
+    <None Remove="Resources\Icons\153-fill.svg" />
+    <None Remove="Resources\Icons\153.svg" />
+    <None Remove="Resources\Icons\1601.svg" />
+    <None Remove="Resources\Icons\1602.svg" />
+    <None Remove="Resources\Icons\1603.svg" />
+    <None Remove="Resources\Icons\1604.svg" />
+    <None Remove="Resources\Icons\1605.svg" />
+    <None Remove="Resources\Icons\1606.svg" />
+    <None Remove="Resources\Icons\1607.svg" />
+    <None Remove="Resources\Icons\1608.svg" />
+    <None Remove="Resources\Icons\1609.svg" />
+    <None Remove="Resources\Icons\1610.svg" />
+    <None Remove="Resources\Icons\1701.svg" />
+    <None Remove="Resources\Icons\1702.svg" />
+    <None Remove="Resources\Icons\1703.svg" />
+    <None Remove="Resources\Icons\1801.svg" />
+    <None Remove="Resources\Icons\1802.svg" />
+    <None Remove="Resources\Icons\1803.svg" />
+    <None Remove="Resources\Icons\1804.svg" />
+    <None Remove="Resources\Icons\1805.svg" />
+    <None Remove="Resources\Icons\2001.svg" />
+    <None Remove="Resources\Icons\2002.svg" />
+    <None Remove="Resources\Icons\2003.svg" />
+    <None Remove="Resources\Icons\2004.svg" />
+    <None Remove="Resources\Icons\2005.svg" />
+    <None Remove="Resources\Icons\2006.svg" />
+    <None Remove="Resources\Icons\2007.svg" />
+    <None Remove="Resources\Icons\2029.svg" />
+    <None Remove="Resources\Icons\2030.svg" />
+    <None Remove="Resources\Icons\2031.svg" />
+    <None Remove="Resources\Icons\2032.svg" />
+    <None Remove="Resources\Icons\2033.svg" />
+    <None Remove="Resources\Icons\2050.svg" />
+    <None Remove="Resources\Icons\2051.svg" />
+    <None Remove="Resources\Icons\2052.svg" />
+    <None Remove="Resources\Icons\2053.svg" />
+    <None Remove="Resources\Icons\2054.svg" />
+    <None Remove="Resources\Icons\2070.svg" />
+    <None Remove="Resources\Icons\2071.svg" />
+    <None Remove="Resources\Icons\2072.svg" />
+    <None Remove="Resources\Icons\2073.svg" />
+    <None Remove="Resources\Icons\2074.svg" />
+    <None Remove="Resources\Icons\2075.svg" />
+    <None Remove="Resources\Icons\2076.svg" />
+    <None Remove="Resources\Icons\2077.svg" />
+    <None Remove="Resources\Icons\2078.svg" />
+    <None Remove="Resources\Icons\2079.svg" />
+    <None Remove="Resources\Icons\2080.svg" />
+    <None Remove="Resources\Icons\2081.svg" />
+    <None Remove="Resources\Icons\2082.svg" />
+    <None Remove="Resources\Icons\2083.svg" />
+    <None Remove="Resources\Icons\2084.svg" />
+    <None Remove="Resources\Icons\2085.svg" />
+    <None Remove="Resources\Icons\2100.svg" />
+    <None Remove="Resources\Icons\2101.svg" />
+    <None Remove="Resources\Icons\2102.svg" />
+    <None Remove="Resources\Icons\2103.svg" />
+    <None Remove="Resources\Icons\2104.svg" />
+    <None Remove="Resources\Icons\2105.svg" />
+    <None Remove="Resources\Icons\2106.svg" />
+    <None Remove="Resources\Icons\2107.svg" />
+    <None Remove="Resources\Icons\2108.svg" />
+    <None Remove="Resources\Icons\2109.svg" />
+    <None Remove="Resources\Icons\2111.svg" />
+    <None Remove="Resources\Icons\2120.svg" />
+    <None Remove="Resources\Icons\2121.svg" />
+    <None Remove="Resources\Icons\2122.svg" />
+    <None Remove="Resources\Icons\2123.svg" />
+    <None Remove="Resources\Icons\2124.svg" />
+    <None Remove="Resources\Icons\2125.svg" />
+    <None Remove="Resources\Icons\2126.svg" />
+    <None Remove="Resources\Icons\2127.svg" />
+    <None Remove="Resources\Icons\2128.svg" />
+    <None Remove="Resources\Icons\2129.svg" />
+    <None Remove="Resources\Icons\2130.svg" />
+    <None Remove="Resources\Icons\2131.svg" />
+    <None Remove="Resources\Icons\2132.svg" />
+    <None Remove="Resources\Icons\2133.svg" />
+    <None Remove="Resources\Icons\2134.svg" />
+    <None Remove="Resources\Icons\2135.svg" />
+    <None Remove="Resources\Icons\2150.svg" />
+    <None Remove="Resources\Icons\2151.svg" />
+    <None Remove="Resources\Icons\2152.svg" />
+    <None Remove="Resources\Icons\2153.svg" />
+    <None Remove="Resources\Icons\2154.svg" />
+    <None Remove="Resources\Icons\2155.svg" />
+    <None Remove="Resources\Icons\2156.svg" />
+    <None Remove="Resources\Icons\2157.svg" />
+    <None Remove="Resources\Icons\2158.svg" />
+    <None Remove="Resources\Icons\2159.svg" />
+    <None Remove="Resources\Icons\2160.svg" />
+    <None Remove="Resources\Icons\2161.svg" />
+    <None Remove="Resources\Icons\2162.svg" />
+    <None Remove="Resources\Icons\2163.svg" />
+    <None Remove="Resources\Icons\2164.svg" />
+    <None Remove="Resources\Icons\2165.svg" />
+    <None Remove="Resources\Icons\2166.svg" />
+    <None Remove="Resources\Icons\2190.svg" />
+    <None Remove="Resources\Icons\2191.svg" />
+    <None Remove="Resources\Icons\2192.svg" />
+    <None Remove="Resources\Icons\2193.svg" />
+    <None Remove="Resources\Icons\2200.svg" />
+    <None Remove="Resources\Icons\2201.svg" />
+    <None Remove="Resources\Icons\2202.svg" />
+    <None Remove="Resources\Icons\2203.svg" />
+    <None Remove="Resources\Icons\2204.svg" />
+    <None Remove="Resources\Icons\2205.svg" />
+    <None Remove="Resources\Icons\2207.svg" />
+    <None Remove="Resources\Icons\2208.svg" />
+    <None Remove="Resources\Icons\2209.svg" />
+    <None Remove="Resources\Icons\2210.svg" />
+    <None Remove="Resources\Icons\2211.svg" />
+    <None Remove="Resources\Icons\2212.svg" />
+    <None Remove="Resources\Icons\2213.svg" />
+    <None Remove="Resources\Icons\2214.svg" />
+    <None Remove="Resources\Icons\2215.svg" />
+    <None Remove="Resources\Icons\2216.svg" />
+    <None Remove="Resources\Icons\2217.svg" />
+    <None Remove="Resources\Icons\2218.svg" />
+    <None Remove="Resources\Icons\2300.svg" />
+    <None Remove="Resources\Icons\2301.svg" />
+    <None Remove="Resources\Icons\2302.svg" />
+    <None Remove="Resources\Icons\2303.svg" />
+    <None Remove="Resources\Icons\2304.svg" />
+    <None Remove="Resources\Icons\2305.svg" />
+    <None Remove="Resources\Icons\2306.svg" />
+    <None Remove="Resources\Icons\2307.svg" />
+    <None Remove="Resources\Icons\2308.svg" />
+    <None Remove="Resources\Icons\2309.svg" />
+    <None Remove="Resources\Icons\2311.svg" />
+    <None Remove="Resources\Icons\2312.svg" />
+    <None Remove="Resources\Icons\2313.svg" />
+    <None Remove="Resources\Icons\2314.svg" />
+    <None Remove="Resources\Icons\2315.svg" />
+    <None Remove="Resources\Icons\2316.svg" />
+    <None Remove="Resources\Icons\2317.svg" />
+    <None Remove="Resources\Icons\2318.svg" />
+    <None Remove="Resources\Icons\2319.svg" />
+    <None Remove="Resources\Icons\2320.svg" />
+    <None Remove="Resources\Icons\2321.svg" />
+    <None Remove="Resources\Icons\2322.svg" />
+    <None Remove="Resources\Icons\2323.svg" />
+    <None Remove="Resources\Icons\2324.svg" />
+    <None Remove="Resources\Icons\2325.svg" />
+    <None Remove="Resources\Icons\2326.svg" />
+    <None Remove="Resources\Icons\2327.svg" />
+    <None Remove="Resources\Icons\2328.svg" />
+    <None Remove="Resources\Icons\2330.svg" />
+    <None Remove="Resources\Icons\2331.svg" />
+    <None Remove="Resources\Icons\2332.svg" />
+    <None Remove="Resources\Icons\2333.svg" />
+    <None Remove="Resources\Icons\2341.svg" />
+    <None Remove="Resources\Icons\2343.svg" />
+    <None Remove="Resources\Icons\2345.svg" />
+    <None Remove="Resources\Icons\2346.svg" />
+    <None Remove="Resources\Icons\2348.svg" />
+    <None Remove="Resources\Icons\2349.svg" />
+    <None Remove="Resources\Icons\2350.svg" />
+    <None Remove="Resources\Icons\2351.svg" />
+    <None Remove="Resources\Icons\2352.svg" />
+    <None Remove="Resources\Icons\2353.svg" />
+    <None Remove="Resources\Icons\2354.svg" />
+    <None Remove="Resources\Icons\2355.svg" />
+    <None Remove="Resources\Icons\2356.svg" />
+    <None Remove="Resources\Icons\2357.svg" />
+    <None Remove="Resources\Icons\2358.svg" />
+    <None Remove="Resources\Icons\2359.svg" />
+    <None Remove="Resources\Icons\2360.svg" />
+    <None Remove="Resources\Icons\2361.svg" />
+    <None Remove="Resources\Icons\2362.svg" />
+    <None Remove="Resources\Icons\2363.svg" />
+    <None Remove="Resources\Icons\2364.svg" />
+    <None Remove="Resources\Icons\2365.svg" />
+    <None Remove="Resources\Icons\2366.svg" />
+    <None Remove="Resources\Icons\2367.svg" />
+    <None Remove="Resources\Icons\2368.svg" />
+    <None Remove="Resources\Icons\2369.svg" />
+    <None Remove="Resources\Icons\2370.svg" />
+    <None Remove="Resources\Icons\2371.svg" />
+    <None Remove="Resources\Icons\2372.svg" />
+    <None Remove="Resources\Icons\2373.svg" />
+    <None Remove="Resources\Icons\2374.svg" />
+    <None Remove="Resources\Icons\2375.svg" />
+    <None Remove="Resources\Icons\2376.svg" />
+    <None Remove="Resources\Icons\2377.svg" />
+    <None Remove="Resources\Icons\2378.svg" />
+    <None Remove="Resources\Icons\2379.svg" />
+    <None Remove="Resources\Icons\2380.svg" />
+    <None Remove="Resources\Icons\2381.svg" />
+    <None Remove="Resources\Icons\2382.svg" />
+    <None Remove="Resources\Icons\2383.svg" />
+    <None Remove="Resources\Icons\2384.svg" />
+    <None Remove="Resources\Icons\2385.svg" />
+    <None Remove="Resources\Icons\2386.svg" />
+    <None Remove="Resources\Icons\2387.svg" />
+    <None Remove="Resources\Icons\2388.svg" />
+    <None Remove="Resources\Icons\2389.svg" />
+    <None Remove="Resources\Icons\2390.svg" />
+    <None Remove="Resources\Icons\2391.svg" />
+    <None Remove="Resources\Icons\2392.svg" />
+    <None Remove="Resources\Icons\2393.svg" />
+    <None Remove="Resources\Icons\2394.svg" />
+    <None Remove="Resources\Icons\2395.svg" />
+    <None Remove="Resources\Icons\2396.svg" />
+    <None Remove="Resources\Icons\2397.svg" />
+    <None Remove="Resources\Icons\2398.svg" />
+    <None Remove="Resources\Icons\2399.svg" />
+    <None Remove="Resources\Icons\2400.svg" />
+    <None Remove="Resources\Icons\2409.svg" />
+    <None Remove="Resources\Icons\2411.svg" />
+    <None Remove="Resources\Icons\2412.svg" />
+    <None Remove="Resources\Icons\2413.svg" />
+    <None Remove="Resources\Icons\2414.svg" />
+    <None Remove="Resources\Icons\2415.svg" />
+    <None Remove="Resources\Icons\2416.svg" />
+    <None Remove="Resources\Icons\2417.svg" />
+    <None Remove="Resources\Icons\2418.svg" />
+    <None Remove="Resources\Icons\2419.svg" />
+    <None Remove="Resources\Icons\2420.svg" />
+    <None Remove="Resources\Icons\2421.svg" />
+    <None Remove="Resources\Icons\2422.svg" />
+    <None Remove="Resources\Icons\2423.svg" />
+    <None Remove="Resources\Icons\2424.svg" />
+    <None Remove="Resources\Icons\2425.svg" />
+    <None Remove="Resources\Icons\2426.svg" />
+    <None Remove="Resources\Icons\300-fill.svg" />
+    <None Remove="Resources\Icons\300.svg" />
+    <None Remove="Resources\Icons\301-fill.svg" />
+    <None Remove="Resources\Icons\301.svg" />
+    <None Remove="Resources\Icons\302-fill.svg" />
+    <None Remove="Resources\Icons\302.svg" />
+    <None Remove="Resources\Icons\303-fill.svg" />
+    <None Remove="Resources\Icons\303.svg" />
+    <None Remove="Resources\Icons\304-fill.svg" />
+    <None Remove="Resources\Icons\304.svg" />
+    <None Remove="Resources\Icons\305-fill.svg" />
+    <None Remove="Resources\Icons\305.svg" />
+    <None Remove="Resources\Icons\306-fill.svg" />
+    <None Remove="Resources\Icons\306.svg" />
+    <None Remove="Resources\Icons\307-fill.svg" />
+    <None Remove="Resources\Icons\307.svg" />
+    <None Remove="Resources\Icons\308-fill.svg" />
+    <None Remove="Resources\Icons\308.svg" />
+    <None Remove="Resources\Icons\309-fill.svg" />
+    <None Remove="Resources\Icons\309.svg" />
+    <None Remove="Resources\Icons\310-fill.svg" />
+    <None Remove="Resources\Icons\310.svg" />
+    <None Remove="Resources\Icons\311-fill.svg" />
+    <None Remove="Resources\Icons\311.svg" />
+    <None Remove="Resources\Icons\312-fill.svg" />
+    <None Remove="Resources\Icons\312.svg" />
+    <None Remove="Resources\Icons\313-fill.svg" />
+    <None Remove="Resources\Icons\313.svg" />
+    <None Remove="Resources\Icons\314-fill.svg" />
+    <None Remove="Resources\Icons\314.svg" />
+    <None Remove="Resources\Icons\315-fill.svg" />
+    <None Remove="Resources\Icons\315.svg" />
+    <None Remove="Resources\Icons\316-fill.svg" />
+    <None Remove="Resources\Icons\316.svg" />
+    <None Remove="Resources\Icons\317-fill.svg" />
+    <None Remove="Resources\Icons\317.svg" />
+    <None Remove="Resources\Icons\318-fill.svg" />
+    <None Remove="Resources\Icons\318.svg" />
+    <None Remove="Resources\Icons\350-fill.svg" />
+    <None Remove="Resources\Icons\350.svg" />
+    <None Remove="Resources\Icons\351-fill.svg" />
+    <None Remove="Resources\Icons\351.svg" />
+    <None Remove="Resources\Icons\399-fill.svg" />
+    <None Remove="Resources\Icons\399.svg" />
+    <None Remove="Resources\Icons\400-fill.svg" />
+    <None Remove="Resources\Icons\400.svg" />
+    <None Remove="Resources\Icons\401-fill.svg" />
+    <None Remove="Resources\Icons\401.svg" />
+    <None Remove="Resources\Icons\402-fill.svg" />
+    <None Remove="Resources\Icons\402.svg" />
+    <None Remove="Resources\Icons\403-fill.svg" />
+    <None Remove="Resources\Icons\403.svg" />
+    <None Remove="Resources\Icons\404-fill.svg" />
+    <None Remove="Resources\Icons\404.svg" />
+    <None Remove="Resources\Icons\405-fill.svg" />
+    <None Remove="Resources\Icons\405.svg" />
+    <None Remove="Resources\Icons\406-fill.svg" />
+    <None Remove="Resources\Icons\406.svg" />
+    <None Remove="Resources\Icons\407-fill.svg" />
+    <None Remove="Resources\Icons\407.svg" />
+    <None Remove="Resources\Icons\408-fill.svg" />
+    <None Remove="Resources\Icons\408.svg" />
+    <None Remove="Resources\Icons\409-fill.svg" />
+    <None Remove="Resources\Icons\409.svg" />
+    <None Remove="Resources\Icons\410-fill.svg" />
+    <None Remove="Resources\Icons\410.svg" />
+    <None Remove="Resources\Icons\456-fill.svg" />
+    <None Remove="Resources\Icons\456.svg" />
+    <None Remove="Resources\Icons\457-fill.svg" />
+    <None Remove="Resources\Icons\457.svg" />
+    <None Remove="Resources\Icons\499-fill.svg" />
+    <None Remove="Resources\Icons\499.svg" />
+    <None Remove="Resources\Icons\500-fill.svg" />
+    <None Remove="Resources\Icons\500.svg" />
+    <None Remove="Resources\Icons\501-fill.svg" />
+    <None Remove="Resources\Icons\501.svg" />
+    <None Remove="Resources\Icons\502-fill.svg" />
+    <None Remove="Resources\Icons\502.svg" />
+    <None Remove="Resources\Icons\503-fill.svg" />
+    <None Remove="Resources\Icons\503.svg" />
+    <None Remove="Resources\Icons\504-fill.svg" />
+    <None Remove="Resources\Icons\504.svg" />
+    <None Remove="Resources\Icons\507-fill.svg" />
+    <None Remove="Resources\Icons\507.svg" />
+    <None Remove="Resources\Icons\508-fill.svg" />
+    <None Remove="Resources\Icons\508.svg" />
+    <None Remove="Resources\Icons\509-fill.svg" />
+    <None Remove="Resources\Icons\509.svg" />
+    <None Remove="Resources\Icons\510-fill.svg" />
+    <None Remove="Resources\Icons\510.svg" />
+    <None Remove="Resources\Icons\511-fill.svg" />
+    <None Remove="Resources\Icons\511.svg" />
+    <None Remove="Resources\Icons\512-fill.svg" />
+    <None Remove="Resources\Icons\512.svg" />
+    <None Remove="Resources\Icons\513-fill.svg" />
+    <None Remove="Resources\Icons\513.svg" />
+    <None Remove="Resources\Icons\514-fill.svg" />
+    <None Remove="Resources\Icons\514.svg" />
+    <None Remove="Resources\Icons\515-fill.svg" />
+    <None Remove="Resources\Icons\515.svg" />
+    <None Remove="Resources\Icons\800.svg" />
+    <None Remove="Resources\Icons\801.svg" />
+    <None Remove="Resources\Icons\802.svg" />
+    <None Remove="Resources\Icons\803.svg" />
+    <None Remove="Resources\Icons\804.svg" />
+    <None Remove="Resources\Icons\805.svg" />
+    <None Remove="Resources\Icons\806.svg" />
+    <None Remove="Resources\Icons\807.svg" />
+    <None Remove="Resources\Icons\900-fill.svg" />
+    <None Remove="Resources\Icons\900.svg" />
+    <None Remove="Resources\Icons\901-fill.svg" />
+    <None Remove="Resources\Icons\901.svg" />
+    <None Remove="Resources\Icons\999-fill.svg" />
+    <None Remove="Resources\Icons\999.svg" />
+    <None Remove="Resources\Icons\9998.svg" />
+    <None Remove="Resources\Icons\9999.svg" />
+    <None Remove="Resources\Icons\qweather-fill.svg" />
+    <None Remove="Resources\Icons\qweather.svg" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\100-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\100.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1001.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1002.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1003.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1004.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1005.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1006.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1007.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1008.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1009.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\101-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\101.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1010.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1011.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1012.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1013.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1014.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1015.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1016.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1017.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1018.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1019.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\102-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\102.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1020.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1021.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1022.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1023.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1024.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1025.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1026.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1027.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1028.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1029.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\103-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\103.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1030.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1031.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1032.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1033.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1034.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1035.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1036.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1037.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1038.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1039.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\104-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\104.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1040.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1041.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1042.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1043.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1044.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1045.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1046.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1047.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1048.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1049.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1050.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1051.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1052.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1053.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1054.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1055.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1056.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1057.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1058.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1059.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1060.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1061.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1062.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1063.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1064.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1065.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1066.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1067.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1068.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1069.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1071.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1072.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1073.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1074.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1075.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1076.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1077.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1078.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1079.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1080.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1081.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1082.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1084.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1085.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1086.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1087.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1088.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1089.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1201.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1202.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1203.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1204.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1205.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1206.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1207.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1208.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1209.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1210.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1211.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1212.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1213.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1214.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1215.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1216.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1217.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1218.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1219.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1221.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1241.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1242.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1243.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1244.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1245.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1246.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1247.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1248.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1249.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1250.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1251.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1271.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1272.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1273.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1274.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\150-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\150.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\151-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\151.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\152-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\152.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\153-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\153.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1601.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1602.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1603.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1604.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1605.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1606.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1607.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1608.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1609.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1610.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1701.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1702.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1703.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1801.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1802.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1803.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1804.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\1805.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2001.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2002.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2003.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2004.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2005.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2006.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2007.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2029.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2030.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2031.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2032.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2033.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2050.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2051.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2052.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2053.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2054.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2070.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2071.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2072.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2073.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2074.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2075.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2076.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2077.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2078.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2079.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2080.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2081.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2082.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2083.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2084.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2085.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2100.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2101.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2102.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2103.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2104.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2105.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2106.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2107.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2108.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2109.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2111.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2120.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2121.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2122.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2123.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2124.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2125.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2126.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2127.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2128.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2129.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2130.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2131.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2132.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2133.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2134.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2135.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2150.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2151.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2152.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2153.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2154.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2155.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2156.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2157.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2158.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2159.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2160.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2161.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2162.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2163.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2164.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2165.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2166.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2190.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2191.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2192.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2193.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2200.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2201.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2202.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2203.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2204.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2205.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2207.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2208.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2209.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2210.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2211.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2212.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2213.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2214.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2215.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2216.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2217.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2218.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2300.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2301.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2302.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2303.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2304.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2305.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2306.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2307.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2308.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2309.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2311.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2312.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2313.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2314.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2315.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2316.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2317.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2318.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2319.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2320.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2321.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2322.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2323.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2324.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2325.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2326.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2327.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2328.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2330.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2331.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2332.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2333.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2341.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2343.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2345.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2346.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2348.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2349.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2350.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2351.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2352.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2353.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2354.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2355.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2356.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2357.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2358.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2359.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2360.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2361.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2362.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2363.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2364.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2365.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2366.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2367.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2368.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2369.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2370.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2371.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2372.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2373.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2374.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2375.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2376.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2377.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2378.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2379.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2380.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2381.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2382.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2383.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2384.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2385.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2386.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2387.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2388.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2389.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2390.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2391.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2392.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2393.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2394.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2395.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2396.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2397.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2398.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2399.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2400.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2409.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2411.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2412.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2413.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2414.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2415.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2416.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2417.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2418.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2419.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2420.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2421.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2422.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2423.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2424.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2425.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\2426.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\300-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\300.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\301-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\301.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\302-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\302.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\303-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\303.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\304-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\304.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\305-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\305.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\306-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\306.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\307-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\307.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\308-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\308.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\309-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\309.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\310-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\310.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\311-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\311.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\312-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\312.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\313-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\313.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\314-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\314.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\315-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\315.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\316-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\316.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\317-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\317.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\318-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\318.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\350-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\350.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\351-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\351.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\399-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\399.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\400-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\400.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\401-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\401.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\402-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\402.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\403-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\403.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\404-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\404.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\405-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\405.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\406-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\406.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\407-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\407.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\408-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\408.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\409-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\409.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\410-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\410.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\456-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\456.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\457-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\457.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\499-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\499.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\500-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\500.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\501-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\501.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\502-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\502.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\503-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\503.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\504-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\504.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\507-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\507.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\508-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\508.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\509-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\509.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\510-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\510.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\511-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\511.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\512-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\512.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\513-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\513.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\514-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\514.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\515-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\515.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\800.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\801.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\802.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\803.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\804.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\805.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\806.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\807.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\900-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\900.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\901-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\901.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\999-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\999.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\9998.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\9999.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\qweather-fill.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
+    <Resource Include="Resources\Icons\qweather.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace></CustomToolNamespace>
+    </Resource>
   </ItemGroup>
 </Project>

@@ -4,8 +4,4 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BilibiliLiveHelper.Services.Interfaces\BilibiliLiveHelper.Services.Interfaces.csproj" />
-  </ItemGroup>
-
 </Project>

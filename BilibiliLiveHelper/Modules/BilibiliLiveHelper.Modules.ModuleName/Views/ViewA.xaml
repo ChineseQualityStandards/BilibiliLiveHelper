@@ -1,13 +1,56 @@
-﻿<UserControl x:Class="BilibiliLiveHelper.Modules.ModuleName.Views.ViewA"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:BilibiliLiveHelper.Modules.ModuleName.Views"
-             xmlns:prism="http://prismlibrary.com/"
-             prism:ViewModelLocator.AutoWireViewModel="True" >
+﻿<UserControl
+    x:Class="BilibiliLiveHelper.Modules.ModuleName.Views.ViewA"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="clr-namespace:BilibiliLiveHelper.Core;assembly=BilibiliLiveHelper.Core"
+    xmlns:i="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:james="https://jamesnet.dev/xaml/presentation"
+    xmlns:local="clr-namespace:BilibiliLiveHelper.Modules.ModuleName.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:navigation="clr-namespace:BilibiliLiveHelper.CustomControlLibrary;assembly=BilibiliLiveHelper.CustomControlLibrary"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="True">
+
     <Grid>
-        <TextBlock Text="{Binding Message}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="24"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Border
+            x:Name="Border"
+            Grid.Row="0"
+            Background="{Binding BorderColor}"
+            CornerRadius="5"
+            MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+
+            <!--#region 丝滑的导航栏-->
+            <!--  哔哩哔哩 UP:小李趣味多  -->
+            <!--  连接地址： https://www.bilibili.com/video/BV1Ui4y1a717?vd_source=791462c33722bc936f39912737b8bf64  -->
+            <navigation:MagicBar
+                x:Name="MagicBar"
+                Grid.Row="0"
+                Margin="5"
+                Background="{Binding ElementName=Border, Path=Background}"
+                SelectedIndex="{Binding ItemIndex}">
+
+                <ListBoxItem Content="功能" Tag="{x:Static james:IconType.FormatListBulleted}" />
+                <ListBoxItem Content="天气" Tag="{x:Static james:IconType.Cloud}" />
+                <ListBoxItem Content="主页" Tag="{x:Static james:IconType.Comment}" />
+                <ListBoxItem Content="主题" Tag="{x:Static james:IconType.WhiteBalanceSunny}" />
+                <ListBoxItem Content="设置" Tag="{x:Static james:IconType.Cog}" />
+            </navigation:MagicBar>
+            <!--#endregion-->
+
+        </Border>
+
+        <navigation:BubbleControl
+            Grid.Row="1"
+            prism:RegionManager.RegionName="{x:Static core:RegionNames.ViewRegion}"
+            Background="{Binding ElementName=MagicBar, Path=Background}"
+            BorderThickness="1" />
+        <!--<ContentControl
+            Grid.Row="1"
+            Height="450"
+            prism:RegionManager.RegionName="{x:Static core:RegionNames.ViewRegion}" />-->
     </Grid>
 </UserControl>

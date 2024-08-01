@@ -1,13 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
     <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BilibiliLiveHelper.Core\BilibiliLiveHelper.Core.csproj" />
-    <ProjectReference Include="..\..\Services\BilibiliLiveHelper.Services.Interfaces\BilibiliLiveHelper.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\BilibiliLiveHelper.CustomControlLibrary\BilibiliLiveHelper.CustomControlLibrary.csproj" />
+    <ProjectReference Include="..\..\..\BilibiliLiveHelper.Services\BilibiliLiveHelper.Services.csproj" />
   </ItemGroup>
 </Project>
