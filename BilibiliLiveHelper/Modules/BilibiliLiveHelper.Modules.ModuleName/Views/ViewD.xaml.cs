@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace BilibiliLiveHelper.Modules.ModuleName.Views
 {
     /// <summary>
-    /// Interaction logic for ViewA.xaml
+    /// ViewD.xaml 的交互逻辑
     /// </summary>
-    public partial class ViewA : UserControl
+    public partial class ViewD : UserControl
     {
-        public ViewA()
+        public ViewD()
         {
             InitializeComponent();
-        }
-
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Application.Current.MainWindow.DragMove();
         }
     }
 }

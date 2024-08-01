@@ -4,9 +4,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\BilibiliLiveHelper.CustomControlLibrary\BilibiliLiveHelper.CustomControlLibrary.csproj" />
     <ProjectReference Include="..\..\BilibiliLiveHelper.Core\BilibiliLiveHelper.Core.csproj" />
     <ProjectReference Include="..\..\Services\BilibiliLiveHelper.Services.Interfaces\BilibiliLiveHelper.Services.Interfaces.csproj" />
   </ItemGroup>

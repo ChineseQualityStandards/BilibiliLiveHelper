@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveHelper", "Bilib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveHelper.Core", "BilibiliLiveHelper\BilibiliLiveHelper.Core\BilibiliLiveHelper.Core.csproj", "{122F8CBA-2D6F-4F48-A8C3-DCF4C657D152}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilibiliLiveHelper.CustomControlLibrary", "BilibiliLiveHelper.CustomControlLibrary\BilibiliLiveHelper.CustomControlLibrary.csproj", "{812BDBDA-10A6-4B37-86D2-9B784B1CC5C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{122F8CBA-2D6F-4F48-A8C3-DCF4C657D152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{122F8CBA-2D6F-4F48-A8C3-DCF4C657D152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{122F8CBA-2D6F-4F48-A8C3-DCF4C657D152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812BDBDA-10A6-4B37-86D2-9B784B1CC5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812BDBDA-10A6-4B37-86D2-9B784B1CC5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812BDBDA-10A6-4B37-86D2-9B784B1CC5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812BDBDA-10A6-4B37-86D2-9B784B1CC5C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
