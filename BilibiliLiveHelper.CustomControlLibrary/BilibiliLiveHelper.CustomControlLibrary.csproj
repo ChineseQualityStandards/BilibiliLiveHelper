@@ -12,9 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Dictionaries\WeatherIcons.xaml">
+    <Resource Include="Dictionaries\WeatherIcons.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
