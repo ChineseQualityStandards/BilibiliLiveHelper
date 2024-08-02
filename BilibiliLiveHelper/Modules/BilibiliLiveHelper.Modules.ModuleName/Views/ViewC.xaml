@@ -7,19 +7,224 @@
     xmlns:local="clr-namespace:BilibiliLiveHelper.Modules.ModuleName.Views"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignHeight="494"
+    d:DesignWidth="567"
     mc:Ignorable="d">
-    <Grid Margin="5">
-        <materialDesign:Card materialDesign:ElevationAssist.Elevation="Dp2" UniformCornerRadius="10">
+    <StackPanel Margin="5">
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <Image
+                Width="35"
+                Height="35"
+                Margin="5">
+                <Image.Source>
+                    <DrawingImage Drawing="{DynamicResource Qweather}" />
+                </Image.Source>
+            </Image>
+            <TextBlock
+                Margin="5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="KaiTi"
+                FontSize="28"
+                FontWeight="Bold"
+                Text="今日天气" />
+            <materialDesign:ColorZone
+                Margin="16,0,0,0"
+                Padding="8,4,8,4"
+                Panel.ZIndex="1"
+                materialDesign:ElevationAssist.Elevation="Dp2"
+                CornerRadius="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button IsEnabled="False" Style="{StaticResource MaterialDesignToolButton}">
+                        <materialDesign:PackIcon Kind="Search" Opacity=".56" />
+                    </Button>
+                    <TextBox
+                        Grid.Column="1"
+                        MinWidth="190"
+                        Margin="8,0,0,0"
+                        VerticalAlignment="Center"
+                        materialDesign:HintAssist.Hint="搜索城市"
+                        materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                        BorderThickness="0" />
+                </Grid>
+            </materialDesign:ColorZone>
+        </StackPanel>
+
+        <materialDesign:Card
+            materialDesign:ElevationAssist.Elevation="Dp4"
+            Background="White"
+            UniformCornerRadius="30">
             <StackPanel>
-                <TextBlock Text="城市" />
-                <Image>
-                    <Image.Source>
-                        <DrawingImage Drawing="{StaticResource Sunny}" />
-                    </Image.Source>
-                </Image>
+                <DockPanel Margin="15,20" LastChildFill="False">
+                    <TextBlock
+                        Margin="15,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        DockPanel.Dock="Left"
+                        FontFamily="KaiTi"
+                        FontSize="25"
+                        Text="金水区" />
+                    <TextBlock
+                        Margin="5,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        DockPanel.Dock="Left"
+                        FontFamily="KaiTi"
+                        FontSize="15"
+                        FontWeight="Light"
+                        Text="河南省/中国" />
+                    <TextBlock
+                        Margin="15,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        DockPanel.Dock="Right"
+                        FontFamily="KaiTi"
+                        FontSize="15"
+                        FontWeight="Light"
+                        Text="2024-08-02 15:08" />
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <materialDesign:Card
+                        Margin="15,0"
+                        Background="ForestGreen"
+                        DockPanel.Dock="Right"
+                        UniformCornerRadius="13">
+                        <StackPanel Margin="15,0" Orientation="Horizontal">
+                            <TextBlock
+                                Margin="3"
+                                FontSize="16"
+                                Text="AQI" />
+                            <TextBlock
+                                Margin="3"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                Text="优" />
+                        </StackPanel>
+                    </materialDesign:Card>
+                </DockPanel>
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <Image Width="60">
+                        <Image.Source>
+                            <DrawingImage>
+                                <DrawingImage.Drawing>
+                                    <GeometryDrawing Brush="Gold" Geometry="{StaticResource qi-100-fill}" />
+                                </DrawingImage.Drawing>
+                            </DrawingImage>
+                        </Image.Source>
+                    </Image>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            DockPanel.Dock="Bottom"
+                            FontFamily="KaiTi"
+                            FontSize="18"
+                            FontWeight="Light"
+                            Text="晴" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            DockPanel.Dock="Bottom"
+                            FontSize="36"
+                            Text="34°" />
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock
+                        Margin="15"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        AllowDrop="True"
+                        FontFamily="KaiTi"
+                        FontSize="16"
+                        FontWeight="Light"
+                        Text="今天白天多云，夜晚晴，温度和昨天差不多，现在34°，有风，空气不错。"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+                <materialDesign:Card
+                    Margin="20,15"
+                    materialDesign:ElevationAssist.Elevation="Dp12"
+                    UniformCornerRadius="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="15,20">
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                FontWeight="Medium"
+                                Text="4级" />
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                FontWeight="Light"
+                                Foreground="Gray"
+                                Text="南风" />
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Column="1"
+                            Margin="15"
+                            HorizontalAlignment="Center">
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                FontWeight="Medium"
+                                Text="65%" />
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                FontWeight="Light"
+                                Foreground="Gray"
+                                Text="相对湿度" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Margin="15">
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                FontWeight="Medium"
+                                Text="很强" />
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontFamily="KaiTi"
+                                FontSize="16"
+                                FontWeight="Light"
+                                Foreground="Gray"
+                                Text="紫外线" />
+                        </StackPanel>
+                    </Grid>
+                </materialDesign:Card>
+                <DockPanel Margin="20,5" LastChildFill="False">
+                    <TextBlock DockPanel.Dock="Right" Text="数据来源：和风天气" />
+                </DockPanel>
             </StackPanel>
         </materialDesign:Card>
-    </Grid>
+    </StackPanel>
 </UserControl>
