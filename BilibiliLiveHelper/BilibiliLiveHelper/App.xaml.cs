@@ -1,6 +1,8 @@
 ﻿using BilibiliLiveHelper.Modules.ModuleName;
 using BilibiliLiveHelper.Services;
 using BilibiliLiveHelper.Services.Interfaces;
+using BilibiliLiveHelper.Services.Interfaces.QWeather;
+using BilibiliLiveHelper.Services.QWeather;
 using BilibiliLiveHelper.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -20,7 +22,7 @@ namespace BilibiliLiveHelper
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            containerRegistry.RegisterSingleton<IGridWeatherService,GridWeatherService>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

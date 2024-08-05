@@ -77,6 +77,15 @@
                         FontSize="15"
                         FontWeight="Light"
                         Text="河南省/中国" />
+                    <Button
+                        Margin="3"
+                        Command="{Binding DelegateCommand}"
+                        CommandParameter="update_weather"
+                        DockPanel.Dock="Right"
+                        Style="{DynamicResource MaterialDesignToolButton}"
+                        ToolTip="更新天气">
+                        <materialDesign:PackIcon Kind="Refresh" Opacity=".56" />
+                    </Button>
                     <TextBlock
                         Margin="15,0"
                         HorizontalAlignment="Center"
