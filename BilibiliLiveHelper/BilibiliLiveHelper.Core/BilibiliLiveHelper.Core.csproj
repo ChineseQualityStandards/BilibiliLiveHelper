@@ -489,6 +489,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="RestSharp" Version="111.4.1" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\100-fill.svg">

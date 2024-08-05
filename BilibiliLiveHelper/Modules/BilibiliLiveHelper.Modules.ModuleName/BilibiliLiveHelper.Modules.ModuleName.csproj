@@ -11,6 +11,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\BilibiliLiveHelper.CustomControlLibrary\BilibiliLiveHelper.CustomControlLibrary.csproj" />
+    <ProjectReference Include="..\..\..\BilibiliLiveHelper.Services.Interfaces\BilibiliLiveHelper.Services.Interfaces.csproj" />
     <ProjectReference Include="..\..\..\BilibiliLiveHelper.Services\BilibiliLiveHelper.Services.csproj" />
+    <ProjectReference Include="..\..\BilibiliLiveHelper.Core\BilibiliLiveHelper.Core.csproj" />
   </ItemGroup>
 </Project>
