@@ -87,9 +87,9 @@ namespace BilibiliLiveHelper.Services.QWeather
             var client = new RestClient(options);
             RestRequest request = new RestRequest();
             request.Method = query.method;
-            //request.AddBody("");
-            query.latandlon = HttpUtility.UrlDecode($"{query.lat},{query.lon}");
-            request.AddParameter("location", query.latandlon);
+     
+            // 这里到最后逗号会被转义，不知道为什么
+            request.AddParameter("location", $"{query.lat},{query.lon}");
             request.AddParameter("key", query.key);
             
             //request.AddParameter("lang", "zh");
