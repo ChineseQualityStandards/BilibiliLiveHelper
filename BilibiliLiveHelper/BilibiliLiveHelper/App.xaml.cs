@@ -23,6 +23,7 @@ namespace BilibiliLiveHelper
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<IGridWeatherService,GridWeatherService>();
+            containerRegistry.RegisterSingleton<IMatchServices, MatchServices>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

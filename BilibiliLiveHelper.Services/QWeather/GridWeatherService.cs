@@ -18,14 +18,12 @@ namespace BilibiliLiveHelper.Services.QWeather
             RestRequest request = new RestRequest();
             request.Method = Method.Get;
             request.AddParameter("location", "广州");
-            request.AddParameter("key", "855caff676ca48fda442297eedca302a");
+            request.AddParameter("key", "");
             request.AddParameter("adm", "guangzhou");
             request.AddParameter("range", "cn");
             request.AddParameter("lang", "zh");
 
             RestResponse response = client.Execute(request);
-
-
 
             return JsonConvert.DeserializeObject<City>(response.Content);
         }
@@ -39,7 +37,7 @@ namespace BilibiliLiveHelper.Services.QWeather
             RestRequest request = new RestRequest();
             request.Method = query.method;
             request.AddParameter("location", query.location);
-            request.AddParameter("key", "855caff676ca48fda442297eedca302a");
+            request.AddParameter("key", query.key);
             //request.AddParameter("adm", "guangzhou");
             //request.AddParameter("range", "cn");
             //request.AddParameter("lang", "zh");
@@ -61,22 +59,12 @@ namespace BilibiliLiveHelper.Services.QWeather
             request.Method = Method.Get;
             //request.AddBody("");
             request.AddParameter("location", "113.28064,23.12518");
-            request.AddParameter("key", "855caff676ca48fda442297eedca302a");
+            request.AddParameter("key", "");
             request.AddParameter("lang", "zh");
 
-
-            /*var request = new RestRequest("/v7/grid-weather/now?location=113.28064,23.12518&key=855caff676ca48fda442297eedca302a&lang=zh", Method.Get);*/
-
-
             RestResponse response = client.Execute(request);
-           // MessageBox.Show(response.Content);
-
-
 
             return JsonConvert.DeserializeObject<GridWeather>(response.Content);
-
-            //return JsonSerializer.Deserialize<GridWeather>(response.Content);
-            //throw new NotImplementedException();
         }
 
 
@@ -91,22 +79,11 @@ namespace BilibiliLiveHelper.Services.QWeather
             // 经纬度要注意，不要弄错了
             request.AddParameter("location", $"{query.lon},{query.lat}");
             request.AddParameter("key", query.key);
-            
-            //request.AddParameter("lang", "zh");
-
-
-            /*var request = new RestRequest("/v7/grid-weather/now?location=113.28064,23.12518&key=855caff676ca48fda442297eedca302a&lang=zh", Method.Get);*/
-
+            request.AddParameter("lang", "zh");
 
             RestResponse response = client.Execute(request);
-            
-
-
 
             return JsonConvert.DeserializeObject<GridWeather>(response.Content);
-
-            //return JsonSerializer.Deserialize<GridWeather>(response.Content);
-            //throw new NotImplementedException();
         }
     }
 }

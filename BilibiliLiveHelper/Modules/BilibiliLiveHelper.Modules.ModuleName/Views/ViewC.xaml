@@ -47,7 +47,7 @@
                         materialDesign:HintAssist.Hint="搜索城市"
                         materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                         BorderThickness="0"
-                        Text="{Binding Query.location, UpdateSourceTrigger=PropertyChanged}">
+                        Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}">
                         <TextBox.InputBindings>
                             <KeyBinding
                                 Key="Return"
@@ -116,7 +116,8 @@
                         FontFamily="KaiTi"
                         FontSize="15"
                         FontWeight="Light"
-                        Text="{Binding UpdateTime}" />
+                        Text="{Binding UpdateTime}"
+                        ToolTip="{Binding UpdateTime}" />
                 </DockPanel>
                 <DockPanel LastChildFill="False">
                     <materialDesign:Card
@@ -262,7 +263,7 @@
                                 FontFamily="KaiTi"
                                 FontSize="16"
                                 FontWeight="Medium"
-                                Text="很强" />
+                                Text="未知" />
                             <TextBlock
                                 Margin="3"
                                 HorizontalAlignment="Left"

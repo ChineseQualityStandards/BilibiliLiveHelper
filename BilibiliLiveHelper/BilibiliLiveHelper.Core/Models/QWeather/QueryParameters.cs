@@ -44,10 +44,7 @@ namespace BilibiliLiveHelper.Core.Models.QWeather
         /// 地区/城市经度
         /// </summary>
         public string lon { get; set; }
-        /// <summary>
-        /// 经纬度
-        /// </summary>
-        public string latandlon {  get; set; }
+        
         /// <summary>
         /// [选填]城市的上级行政区划
         /// </summary>
