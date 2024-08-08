@@ -1,4 +1,5 @@
-﻿using BilibiliLiveHelper.Core.Models.QWeather;
+﻿using BilibiliLiveHelper.Core;
+using BilibiliLiveHelper.Core.Models.QWeather;
 using BilibiliLiveHelper.Core.Mvvm;
 using BilibiliLiveHelper.Services.Interfaces;
 using BilibiliLiveHelper.Services.Interfaces.QWeather;
@@ -28,7 +29,14 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
         #region 属性
 
-        private QueryParameters query = new QueryParameters();
+        private QueryParameters query = new QueryParameters()
+        {
+            requestURL = "https://devapi.qweather.com/v7/grid-weather/now?",
+            method = Method.Get,
+            // 自己申请
+            lat = "23.12518",
+            lon = "113.28064",
+        };
 
         public QueryParameters Query
         {
@@ -188,6 +196,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
             DelegateCommand = new DelegateCommand<string>(DelegateMethod);
 
+            Configurer.GetWeatherKey();
+            Query.key = Configurer.WeatherKey;
+
             DelegateMethod("update_weather");
 
         }
@@ -199,21 +210,19 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                 switch (command)
                 {
                     case "update_weather":
-                        City = _weatherService.GetCity();
-                        Weather = _weatherService.GetGridWeather();
+                        if (string.IsNullOrEmpty(Query.key))
+                            throw new KeyNotFoundException("请添加查询密钥");
+                        Weather = _weatherService.GetGridWeather(Query);
                         UpdateData();
-                        ImageStyle = Application.Current.Resources["SunnyFill"] as Style;
+                        ImageStyle = Application.Current.Resources[WeatherIcon] as Style;
                         break;
                     case "GetWeatherByCityName":
                         Query.requestURL = "https://geoapi.qweather.com/v2/city/lookup?";
-                        Query.method = Method.Get;
-                        // 自己申请
-                        Query.key = "";
                         Query.location = Location;
                         City = _weatherService.GetCity(Query);
-                        if (City.code.Equals("401"))
+                        if (!City.code.Equals("200"))
                         {
-                            UpdateTime = City.code;
+                            UpdateTime = $"Code:{City.code}";
                             break;
                         }
                         Query.requestURL = "https://devapi.qweather.com/v7/grid-weather/now?";
