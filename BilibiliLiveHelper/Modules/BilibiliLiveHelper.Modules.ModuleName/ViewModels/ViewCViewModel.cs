@@ -1,18 +1,15 @@
 ﻿using BilibiliLiveHelper.Core;
 using BilibiliLiveHelper.Core.Models.QWeather;
+using BilibiliLiveHelper.Core.Models.RestClient;
 using BilibiliLiveHelper.Core.Mvvm;
-using BilibiliLiveHelper.Services.Interfaces;
-using BilibiliLiveHelper.Services.Interfaces.QWeather;
+using BilibiliLiveHelper.Services.Interfaces.Genericity;
 using Prism.Commands;
 using Prism.Regions;
-using RestSharp;
 using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 {
@@ -20,36 +17,42 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
     {
         #region 字段
 
-        private readonly IGridWeatherService _weatherService;
-
-        private readonly IMatchServices _matchServices;
+        private readonly IRestClientService _restClientService;
 
         #endregion
 
 
         #region 属性
 
-        private QueryParameters query = new QueryParameters()
+        private RequestParameterModels locationRequest;
+        /// <summary>
+        /// 查询地区请求
+        /// </summary>
+        public RequestParameterModels LocationRequest
         {
-            requestURL = "https://devapi.qweather.com/v7/grid-weather/now?",
-            method = Method.Get,
-            // 自己申请
-            lat = "23.12518",
-            lon = "113.28064",
-        };
-
-        public QueryParameters Query
-        {
-            get { return query; }
-            set { SetProperty(ref query, value); }
+            get { return locationRequest; }
+            set { SetProperty(ref locationRequest, value); }
         }
+
+        private RequestParameterModels weatherRequest;
+        /// <summary>
+        /// 查询天气请求
+        /// </summary>
+        public RequestParameterModels WeatherRequest
+        {
+            get { return weatherRequest; }
+            set { SetProperty(ref weatherRequest, value); }
+        }
+
 
 
         public DelegateCommand<string> DelegateCommand { get; set; }
 
 
         private Style imageStyle;
-
+        /// <summary>
+        /// 天气图标样式
+        /// </summary>
         public Style ImageStyle
         {
             get { return imageStyle; }
@@ -58,17 +61,20 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
 
         private City city = new City();
-
+        /// <summary>
+        /// 地区信息
+        /// </summary>
         public City City
         {
             get { return city; }
             set { SetProperty(ref city, value); }
-        }
-
+        }    
 
 
         private GridWeather weather = new GridWeather();
-
+        /// <summary>
+        /// 天气信息
+        /// </summary>
         public GridWeather Weather
         {
             get { return weather; }
@@ -76,7 +82,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string location;
-
+        /// <summary>
+        /// 地区名
+        /// </summary>
         public string Location
         {
             get { return location; }
@@ -84,7 +92,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string cityName;
-
+        /// <summary>
+        /// 城市名
+        /// </summary>
         public string CityName
         {
             get { return cityName; }
@@ -92,7 +102,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string adm1;
-
+        /// <summary>
+        /// 所属行政区域
+        /// </summary>
         public string Adm1
         {
             get { return adm1; }
@@ -100,31 +112,19 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string adm2;
-
+        /// <summary>
+        /// 上级行政区域
+        /// </summary>
         public string Adm2
         {
             get { return adm2; }
             set { SetProperty(ref adm2, value); }
         }
 
-        private string lat;
-
-        public string Lat
-        {
-            get { return lat; }
-            set { SetProperty(ref lat, value); }
-        }
-
-        private string lon;
-
-        public string Lon
-        {
-            get { return lon; }
-            set { SetProperty(ref lon, value); }
-        }
-
         private string updateTime;
-
+        /// <summary>
+        /// 更新时间
+        /// </summary>
         public string UpdateTime
         {
             get { return updateTime; }
@@ -132,7 +132,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string weatherText;
-
+        /// <summary>
+        /// 天气描述
+        /// </summary>
         public string WeatherText
         {
             get { return weatherText; }
@@ -141,7 +143,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
 
         private string weatherIcon;
-
+        /// <summary>
+        /// 天气图标编号
+        /// </summary>
         public string WeatherIcon
         {
             get { return weatherIcon; }
@@ -150,7 +154,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
 
         private string temperature;
-
+        /// <summary>
+        /// 温度
+        /// </summary>
         public string Temperature
         {
             get { return temperature; }
@@ -158,7 +164,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string windScale;
-
+        /// <summary>
+        /// 风力等级
+        /// </summary>
         public string WindScale
         {
             get { return windScale; }
@@ -167,7 +175,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
 
         private string windDir;
-
+        /// <summary>
+        /// 风向
+        /// </summary>
         public string WindDir
         {
             get { return windDir; }
@@ -175,7 +185,9 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
         private string humidity;
-
+        /// <summary>
+        ///  湿度
+        /// </summary>
         public string Humidity
         {
             get { return humidity; }
@@ -187,60 +199,48 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
         #region 函数
 
-        public ViewCViewModel(IRegionManager regionManager, IGridWeatherService weatherService, IMatchServices matchServices) :
+        public ViewCViewModel(IRegionManager regionManager, IRestClientService restClientService) :
             base(regionManager)
         {
-            _weatherService = weatherService;
-
-            _matchServices = matchServices;
+            _restClientService = restClientService;
 
             DelegateCommand = new DelegateCommand<string>(DelegateMethod);
 
-            Configurer.GetWeatherKey();
-            Query.key = Configurer.WeatherKey;
 
-            DelegateMethod("update_weather");
+            // 创建地区请求对象
+            LocationRequest = new RequestParameterModels();
+            // 创建天气请求对象
+            WeatherRequest = new RequestParameterModels();
+            // 读取配置文件
+            Configurer.ReLoadSetting();            
 
         }
 
-        private void DelegateMethod(string command)
+        private async void DelegateMethod(string command)
         {
             try
             {
                 switch (command)
                 {
-                    case "update_weather":
-                        if (string.IsNullOrEmpty(Query.key))
-                            throw new KeyNotFoundException("请添加查询密钥");
-                        Weather = _weatherService.GetGridWeather(Query);
-                        UpdateData();
-                        ImageStyle = Application.Current.Resources[WeatherIcon] as Style;
-                        break;
                     case "GetWeatherByCityName":
-                        Query.requestURL = "https://geoapi.qweather.com/v2/city/lookup?";
-                        Query.location = Location;
-                        City = _weatherService.GetCity(Query);
-                        if (!City.code.Equals("200"))
-                        {
-                            UpdateTime = $"Code:{City.code}";
-                            break;
-                        }
-                        Query.requestURL = "https://devapi.qweather.com/v7/grid-weather/now?";
-                        var _location = City.location.FirstOrDefault(o => o.name.Equals(Location));
-                        if (_location == null)
-                        {
-                            UpdateTime = "找不到该城市";
-                            break;
-                        }
-                        Query.cityName = _location.name;
-                        Query.lat = _location.lat;
-                        Query.lon = _location.lon;
-                        Query.adm1 = _location.adm1;
-                        Query.adm2 = _location.adm2;
-                        //Weather = _weatherService.GetGridWeather();
-                        Weather = _weatherService.GetGridWeather(Query);
-                        UpdateData();
-                        ImageStyle = Application.Current.Resources[WeatherIcon] as Style;
+                        UpdateTime = "天气查询中……";
+                         await Task.Run(async()=>{
+                            UpdateRequest();
+                            LocationRequest.Flag = false;
+                            City = await _restClientService.GetAsync<City>(LocationRequest);
+                            if (City.code != "200")
+                                throw new DataException($"CityCode:{City.code}");
+                            UpdateRequest();
+                            WeatherRequest.Flag = false;
+                            Weather = await _restClientService.GetAsync<GridWeather>(WeatherRequest);
+                            if (Weather.code != "200")
+                                throw new DataException($"WeatherCode:{Weather.code}");
+                            UpdateData();
+                            LocationRequest.Flag = true;
+                            WeatherRequest.Flag = true;
+
+                        });
+                        
                         break;
                     default:
                         break;
@@ -252,14 +252,17 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                 UpdateTime = ex.Message;
             }
         }
-
+        /// <summary>
+        /// 更新数据
+        /// </summary>
         public void UpdateData()
         {
-            if (Weather.code.Equals("200"))
+            try
             {
-                CityName = Query.cityName;
-                Adm1 = Query.adm1;
-                Adm2 = Query.adm2;
+                var c = City.location.FirstOrDefault(o => o.name.Equals(Location));
+                CityName = c.name;
+                Adm1 = c.adm1;
+                Adm2 = c.adm2;
                 UpdateTime = Weather.updateTime;
                 WeatherText = Weather.now.text;
                 WeatherIcon = WeatherCondition.GetWeatherCondition(Weather.now.icon);
@@ -267,10 +270,60 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                 WindScale = Weather.now.windScale;
                 WindDir = Weather.now.windDir;
                 Humidity = Weather.now.humidity;
+                // 更新图标样式
+                ImageStyle = Application.Current.Resources[WeatherIcon] as Style;
             }
-            else
+            catch (Exception ex)
             {
-                UpdateTime = $"Code:{Weather.code}";
+                UpdateTime = ex.Message;
+            }
+        }
+
+        /// <summary>
+        /// 更新请求内容
+        /// </summary>
+        public void UpdateRequest()
+        {
+            try
+            {
+                if (LocationRequest.Flag)
+                {
+                    // 获取请求地址
+                    LocationRequest.RequestURL = Configurer.LocationRequestUrl;
+                    LocationRequest.paras.Clear();
+                    LocationRequest.paras.Add("location", Location);
+                    LocationRequest.paras.Add("key",Configurer.WeatherKey);
+                    //LocationRequest.paras.Add("adm", "guangzhou");
+                    LocationRequest.paras.Add("range", "cn");
+                    LocationRequest.paras.Add("lang", "zh");
+                    LocationRequest.Flag = false;
+                }
+                else
+                {
+                    throw new Exception("已经在查询了.");
+                }
+                if (WeatherRequest.Flag)
+                {
+                    // 获取请求地址
+                    WeatherRequest.RequestURL = Configurer.WeatherRequestUrl;
+                    WeatherRequest.paras.Clear();
+                    var _location = City.location.FirstOrDefault(o => o.name.Equals(Location));
+                    if(_location == null)
+                        throw new ArgumentNullException("找不到城市");
+                    WeatherRequest.paras.Add("location",$"{City.location.FirstOrDefault().lon},{City.location.FirstOrDefault().lat}");
+                    WeatherRequest.paras.Add ("key",Configurer.WeatherKey);
+                    WeatherRequest.paras.Add("lang", "zh");
+                    WeatherRequest.Flag = false;
+                }
+                else
+                {
+                    throw new Exception("已经在查询了.");
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 

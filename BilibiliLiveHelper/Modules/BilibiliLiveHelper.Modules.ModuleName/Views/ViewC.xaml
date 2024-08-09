@@ -180,7 +180,7 @@
                         FontFamily="KaiTi"
                         FontSize="16"
                         FontWeight="Light"
-                        Text="今天白天多云，夜晚晴，温度和昨天差不多，现在34°，有风，空气不错。"
+                        Text=""
                         TextAlignment="Center"
                         TextWrapping="Wrap" />
                 </StackPanel>

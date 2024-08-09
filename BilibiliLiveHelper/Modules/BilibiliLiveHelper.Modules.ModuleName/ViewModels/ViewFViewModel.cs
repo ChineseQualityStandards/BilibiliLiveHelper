@@ -52,15 +52,6 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         }
 
 
-        private string weatherKey;
-
-        public string WeatherKey
-        {
-            get { return weatherKey; }
-            set { SetProperty(ref weatherKey, value); }
-        }
-
-
         #endregion
 
         #region 函数
@@ -74,7 +65,7 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
             KeyCommand = new DelegateCommand<PasswordBox>(DelegateMethod);
 
             Configurer.GetWeatherKey();
-            WeatherKey = Configurer.WeatherKey;
+            EncryptedString = Configurer.EncryptedString;
         }
 
         private void DelegateMethod(string command)
@@ -93,13 +84,12 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                     else
                     {
                         IsLocked = "Unlocked";
-                        EncryptedString = WeatherKey;
+                        EncryptedString = Configurer.WeatherKey;
                         
                     }
                     CanBeModified = !CanBeModified;
                     break;
                 case "SetWeatherKey":
-                    WeatherKey = EncryptedString;
                     Configurer.SetWeatherKey(EncryptedString);
                     break;
                 default:
