@@ -19,7 +19,7 @@ namespace BilibiliLiveHelper.Core.Models.RestClient
         /// <summary>
         /// 请求地址
         /// </summary>
-        public string RequestURL { get; set; }
+        public string RequestURL { get; set; } = string.Empty;
         /// <summary>
         /// 请求方式
         /// </summary>

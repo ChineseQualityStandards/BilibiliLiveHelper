@@ -16,6 +16,7 @@ namespace BilibiliLiveHelper.Core
                 return SetEncryptedString(WeatherKey, '*'); 
             } 
         }
+        public static string Location { get; private set; } = string.Empty;
         public static string WeatherKey { get; private set; } = string.Empty;
         public static string LocationRequestUrl { get; private set; } = string.Empty;
         public static string WeatherRequestUrl { get; private set; } = string.Empty;
@@ -34,6 +35,22 @@ namespace BilibiliLiveHelper.Core
                 builder.Append(replacement);
             }
             return builder.ToString();
+        }
+
+        public static void GetLocation()
+        {
+            Location = ConfigurationManager.AppSettings["Location"];
+        }
+
+        public static void SetLocation(string name)
+        {
+            Location = name;
+            ConfigurationManager.AppSettings["Location"] = Location;
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            var appSettingsSection = configuration.AppSettings.Settings;
+            appSettingsSection.Remove("Location"); // 删除旧项
+            appSettingsSection.Add("Location", Location); // 添加新项
+            configuration.Save(ConfigurationSaveMode.Modified); // 保存更改
         }
 
         public static void GetWeatherKey()
@@ -88,6 +105,7 @@ namespace BilibiliLiveHelper.Core
 
         public static void ReLoadSetting()
         {
+            GetLocation();
             GetWeatherKey();
             GetLocationRequestUrl();
             GetWeatherRequestUrl();

@@ -208,11 +208,13 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
 
 
             // 创建地区请求对象
-            LocationRequest = new RequestParameterModels();
+            LocationRequest = new RequestParameterModels() { Flag = true };
             // 创建天气请求对象
-            WeatherRequest = new RequestParameterModels();
+            WeatherRequest = new RequestParameterModels() { Flag = false };
             // 读取配置文件
-            Configurer.ReLoadSetting();            
+            Configurer.ReLoadSetting();
+
+            DelegateMethod("loading");
 
         }
 
@@ -222,25 +224,35 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
             {
                 switch (command)
                 {
+                    case "loading":
+                        UpdateTime = "天气查询中……";
+                        LocationRequest.Flag = true;
+                        CityName = Configurer.Location;
+                        UpdateRequest();
+                        City = await _restClientService.GetAsync<City>(LocationRequest);
+                        if (City.code != "200")
+                            throw new DataException($"CityCode:{City.code}");
+                        WeatherRequest.Flag = true;
+                        UpdateRequest();
+                        Weather = await _restClientService.GetAsync<GridWeather>(WeatherRequest);
+                        if (Weather.code != "200")
+                            throw new DataException($"WeatherCode:{Weather.code}");
+                        UpdateData();
+                        break;
                     case "GetWeatherByCityName":
                         UpdateTime = "天气查询中……";
-                         await Task.Run(async()=>{
-                            UpdateRequest();
-                            LocationRequest.Flag = false;
-                            City = await _restClientService.GetAsync<City>(LocationRequest);
-                            if (City.code != "200")
-                                throw new DataException($"CityCode:{City.code}");
-                            UpdateRequest();
-                            WeatherRequest.Flag = false;
-                            Weather = await _restClientService.GetAsync<GridWeather>(WeatherRequest);
-                            if (Weather.code != "200")
-                                throw new DataException($"WeatherCode:{Weather.code}");
-                            UpdateData();
-                            LocationRequest.Flag = true;
-                            WeatherRequest.Flag = true;
-
-                        });
-                        
+                        LocationRequest.Flag = true;
+                        CityName = Location;
+                        UpdateRequest();
+                        City = await _restClientService.GetAsync<City>(LocationRequest);
+                        if (City.code != "200")
+                            throw new DataException($"CityCode:{City.code}");
+                        WeatherRequest.Flag = true;
+                        UpdateRequest();
+                        Weather = await _restClientService.GetAsync<GridWeather>(WeatherRequest);
+                        if (Weather.code != "200")
+                            throw new DataException($"WeatherCode:{Weather.code}");
+                        UpdateData();
                         break;
                     default:
                         break;
@@ -249,7 +261,7 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
             catch (Exception ex)
             {
 
-                UpdateTime = ex.Message;
+                UpdateTime = "DelegateMethod - " + ex.Message;
             }
         }
         /// <summary>
@@ -259,23 +271,26 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         {
             try
             {
-                var c = City.location.FirstOrDefault(o => o.name.Equals(Location));
-                CityName = c.name;
-                Adm1 = c.adm1;
-                Adm2 = c.adm2;
-                UpdateTime = Weather.updateTime;
-                WeatherText = Weather.now.text;
-                WeatherIcon = WeatherCondition.GetWeatherCondition(Weather.now.icon);
-                Temperature = Weather.now.temp;
-                WindScale = Weather.now.windScale;
-                WindDir = Weather.now.windDir;
-                Humidity = Weather.now.humidity;
-                // 更新图标样式
-                ImageStyle = Application.Current.Resources[WeatherIcon] as Style;
+                var c = City.location.FirstOrDefault(o => o.name.Equals(CityName));
+                if (c != null)
+                {
+                    CityName = c.name;
+                    Adm1 = c.adm1;
+                    Adm2 = c.adm2;
+                    UpdateTime = Weather.updateTime;
+                    WeatherText = Weather.now.text;
+                    WeatherIcon = WeatherCondition.GetWeatherCondition(Weather.now.icon);
+                    Temperature = Weather.now.temp;
+                    WindScale = Weather.now.windScale;
+                    WindDir = Weather.now.windDir;
+                    Humidity = Weather.now.humidity;
+                    // 更新图标样式
+                    ImageStyle = Application.Current.Resources[WeatherIcon] as Style;
+                }
             }
             catch (Exception ex)
             {
-                UpdateTime = ex.Message;
+                UpdateTime = "UpdateData - " + ex.Message;
             }
         }
 
@@ -291,23 +306,19 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                     // 获取请求地址
                     LocationRequest.RequestURL = Configurer.LocationRequestUrl;
                     LocationRequest.paras.Clear();
-                    LocationRequest.paras.Add("location", Location);
+                    LocationRequest.paras.Add("location", CityName);
                     LocationRequest.paras.Add("key",Configurer.WeatherKey);
                     //LocationRequest.paras.Add("adm", "guangzhou");
                     LocationRequest.paras.Add("range", "cn");
                     LocationRequest.paras.Add("lang", "zh");
                     LocationRequest.Flag = false;
                 }
-                else
-                {
-                    throw new Exception("已经在查询了.");
-                }
                 if (WeatherRequest.Flag)
                 {
                     // 获取请求地址
                     WeatherRequest.RequestURL = Configurer.WeatherRequestUrl;
                     WeatherRequest.paras.Clear();
-                    var _location = City.location.FirstOrDefault(o => o.name.Equals(Location));
+                    var _location = City.location.FirstOrDefault(o => o.name.Equals(CityName));
                     if(_location == null)
                         throw new ArgumentNullException("找不到城市");
                     WeatherRequest.paras.Add("location",$"{City.location.FirstOrDefault().lon},{City.location.FirstOrDefault().lat}");
@@ -315,15 +326,11 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                     WeatherRequest.paras.Add("lang", "zh");
                     WeatherRequest.Flag = false;
                 }
-                else
-                {
-                    throw new Exception("已经在查询了.");
-                }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("UpdateRequest - " + ex.Message);
             }
         }
 

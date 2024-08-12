@@ -42,23 +42,6 @@
                             CommandParameter="SetWeatherKey" />
                     </TextBox.InputBindings>
                 </TextBox>
-                <!--<PasswordBox
-                    x:Name="KeyBox"
-                    Grid.Column="1"
-                    MinWidth="190"
-                    Margin="8,0,0,0"
-                    VerticalAlignment="Center"
-                    materialDesign:HintAssist.Hint="请输入和风天气用户密钥"
-                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
-                    BorderThickness="0"
-                    IsEnabled="{Binding CanBeModified}">
-                    <PasswordBox.InputBindings>
-                        <KeyBinding
-                            Key="Return"
-                            Command="{Binding DelegateCommand}"
-                            CommandParameter="{Binding ElementName=KeyBox}" />
-                    </PasswordBox.InputBindings>
-                </PasswordBox>-->
                 <Button
                     Grid.Column="2"
                     Command="{Binding DelegateCommand}"
@@ -69,6 +52,53 @@
                 </Button>
             </Grid>
         </Border>
+        <Border
+            Margin="5"
+            Background="White"
+            CornerRadius="10">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button IsEnabled="False" Style="{StaticResource MaterialDesignToolButton}">
+                    <materialDesign:PackIcon Kind="Key" Opacity=".56" />
+                </Button>
+                <TextBox
+                    Grid.Column="1"
+                    MinWidth="190"
+                    Margin="8,0,0,0"
+                    VerticalAlignment="Center"
+                    materialDesign:HintAssist.Hint="请输入城市名"
+                    materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                    BorderThickness="0"
+                    Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}">
+                    <TextBox.InputBindings>
+                        <KeyBinding
+                            Key="Return"
+                            Command="{Binding DelegateCommand}"
+                            CommandParameter="SetLocation" />
+                    </TextBox.InputBindings>
+                </TextBox>
+                <Button
+                    Grid.Column="2"
+                    Command="{Binding DelegateCommand}"
+                    CommandParameter="SetLocation"
+                    IsEnabled="True"
+                    Style="{StaticResource MaterialDesignToolButton}"
+                    ToolTip="设置默认城市">
+                    <materialDesign:PackIcon Kind="Pin" Opacity=".56" />
+                </Button>
+            </Grid>
+        </Border>
+        <TextBlock
+            Height="40"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Foreground="Red"
+            Text="{Binding Message}"
+            TextAlignment="Center" />
         <Button
             Height="40"
             Margin="10"
@@ -77,5 +107,6 @@
             Command="{Binding DelegateCommand}"
             CommandParameter="Exit"
             Content="退出程序" />
+
     </StackPanel>
 </UserControl>

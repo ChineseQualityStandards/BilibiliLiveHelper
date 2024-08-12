@@ -25,7 +25,6 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         #region 属性
 
         public DelegateCommand<string> DelegateCommand { get; set; }
-        public DelegateCommand<PasswordBox> KeyCommand { get; set; }
 
         private string isLocked = "Lock";
 
@@ -43,12 +42,28 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
             set { SetProperty(ref canBeModified,value); }
         }
 
-        private string encryptedString = Configurer.EncryptedString;
+        private string encryptedString;
 
         public string EncryptedString
         {
             get { return encryptedString; }
             set { SetProperty(ref encryptedString,value); }
+        }
+
+        private string location;
+
+        public string Location
+        {
+            get { return location; }
+            set { SetProperty(ref location,value); }
+        }
+
+        private string message;
+
+        public string Message
+        {
+            get { return message; }
+            set { SetProperty(ref message,value); }
         }
 
 
@@ -62,10 +77,13 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
             _regionManager = regionManager;
            
             DelegateCommand = new DelegateCommand<string>(DelegateMethod);
-            KeyCommand = new DelegateCommand<PasswordBox>(DelegateMethod);
+            
 
             Configurer.GetWeatherKey();
             EncryptedString = Configurer.EncryptedString;
+
+            Configurer.GetLocation();
+            Location = Configurer.Location;
         }
 
         private void DelegateMethod(string command)
@@ -80,17 +98,24 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
                     {
                         IsLocked = "Lock";
                         EncryptedString = Configurer.EncryptedString;
+                        Message = " 隐藏了密钥";
                     }
                     else
                     {
                         IsLocked = "Unlocked";
                         EncryptedString = Configurer.WeatherKey;
+                        Message = "显示了密钥";
                         
                     }
                     CanBeModified = !CanBeModified;
                     break;
+                case "SetLocation":
+                    Configurer.SetLocation(Location);
+                    Message = "已更新默认城市";
+                    break;
                 case "SetWeatherKey":
                     Configurer.SetWeatherKey(EncryptedString);
+                    Message = "已更新用户密钥";
                     break;
                 default:
                     MessageBox.Show("Test");
