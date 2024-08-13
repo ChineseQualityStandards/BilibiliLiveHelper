@@ -71,19 +71,19 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
             switch (command)
             {
                 case "0":
-                    _regionManager.RequestNavigate(RegionNames.ViewRegion, RegionNames.ViewB);
+                    _regionManager.RequestNavigate(RegionNames.ViewARegion, RegionNames.ViewB);
                     break;
                 case "1":
-                    _regionManager.RequestNavigate(RegionNames.ViewRegion, RegionNames.ViewC);
+                    _regionManager.RequestNavigate(RegionNames.ViewARegion, RegionNames.ViewC);
                     break;
                 case "2":
-                    _regionManager.RequestNavigate(RegionNames.ViewRegion, RegionNames.ViewD);
+                    _regionManager.RequestNavigate(RegionNames.ViewARegion, RegionNames.ViewD);
                     break;
                 case "3":
-                    _regionManager.RequestNavigate(RegionNames.ViewRegion, RegionNames.ViewE);
+                    _regionManager.RequestNavigate(RegionNames.ViewARegion, RegionNames.ViewE);
                     break;
                 case "4":
-                    _regionManager.RequestNavigate(RegionNames.ViewRegion, RegionNames.ViewF);
+                    _regionManager.RequestNavigate(RegionNames.ViewARegion, RegionNames.ViewF);
                     break;
                 default:
                     //MessageBox.Show(command);

@@ -19,8 +19,8 @@ namespace BilibiliLiveHelper.Modules.ModuleName
         public void OnInitialized(IContainerProvider containerProvider)
         {
             _regionManager.RequestNavigate(RegionNames.ContentRegion, RegionNames.ViewA);
-            _regionManager.RequestNavigate(RegionNames.ViewRegion,RegionNames.ViewB);
-            
+            _regionManager.RequestNavigate(RegionNames.ViewARegion, RegionNames.ViewB);
+            _regionManager.RequestNavigate(RegionNames.ViewDRegion, RegionNames.ViewG);
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

@@ -1,4 +1,5 @@
-﻿using BilibiliLiveHelper.Core.Mvvm;
+﻿using BilibiliLiveHelper.Core;
+using BilibiliLiveHelper.Core.Mvvm;
 using BilibiliLiveHelper.Services.Interfaces;
 using Prism.Regions;
 using System;
@@ -12,6 +13,7 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
     public class ViewDViewModel : RegionViewModelBase
     {
         #region 字段
+        private readonly IRegionManager _regionManager;
 
         #endregion
 
@@ -25,7 +27,7 @@ namespace BilibiliLiveHelper.Modules.ModuleName.ViewModels
         public ViewDViewModel(IRegionManager regionManager) :
             base(regionManager)
         {
-
+            _regionManager = regionManager;
         }
 
         public override void OnNavigatedTo(NavigationContext navigationContext)

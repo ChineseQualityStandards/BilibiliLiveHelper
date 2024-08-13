@@ -45,7 +45,7 @@
 
         <navigation:BubbleControl
             Grid.Row="1"
-            prism:RegionManager.RegionName="{x:Static core:RegionNames.ViewRegion}"
+            prism:RegionManager.RegionName="{x:Static core:RegionNames.ViewARegion}"
             Background="{Binding ElementName=MagicBar, Path=Background}"
             BorderThickness="1" />
         <!--<ContentControl

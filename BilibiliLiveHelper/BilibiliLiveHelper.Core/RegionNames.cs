@@ -5,7 +5,8 @@
         #region 区域名
 
         public const string ContentRegion = "ContentRegion";
-        public const string ViewRegion = "ViewRegion";
+        public const string ViewARegion = "ViewARegion";
+        public const string ViewDRegion = "ViewDRegion";
 
         #endregion
 
